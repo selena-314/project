@@ -17,15 +17,15 @@ We set up the data frame. Edit the data below to include information about your 
 
 ```{r setup-tibble}
 team_data <- tibble(
-  name = c("Peter Rabbit", "member 1", "member 2", 
-           "member 3", "member 4"),
-  github_username = c("mcgregors-garden", "username 1", "username 2", 
-                      "username 3", "username 4"), 
-  colour = c("powderblue", "colour 1", "colour 2", 
-             "colour 3", "colour 4"),
-  hobby = c("Hopping", "hobby 1", "hobby 2", 
-            "hobby 3", "hobby 4"),
-  favourite_number = c(2, NA, NA, NA, NA)
+  name = c("Kumi Stevens", "Carla Martin", "Ash Warnes", 
+           "Shreya", "Brogan"),
+  github_username = c("kumi-stevens", "cmartin658", "ashbrw7", 
+                      "ggshreya", "Brogan07125"), 
+  colour = c("goldenrod1", "green3", "purple", 
+             "blue", "pink"),
+  hobby = c("clarinet", "football", "art", 
+            "cello", "singing"),
+  favourite_number = c(3, 9, 7, 2, 5)
   )
 
 team_data
@@ -46,20 +46,19 @@ p1 <- ggplot(data = team_data,
 p1
 ```
 
-
-*Remove this text (including the stars), and add your answer for Exercise 18 here.*
+This is a bar chart that shows what everyone's favourite number is (y-axis). The bars are filled with the favourite colour of that specific person. Each person is identified by their github username (x-axis).
 
 ### Exercises 19
 
 Change the text of the plot title and axis labels.
 
 ```{r labelled-bar-plot}
-p1 + labs(x = "Insert text here", 
-          y = "Insert text here",
-          title = "Insert text here")
+p1 + labs(x = "Name", 
+          y = "Favourite number",
+          title = "What is everyone's favourite number?")
 ```
 
-*Remove this text (including the stars), and add your answer for Exercise 19 here.*
+The labs function allows the user to set a title, and label names for the x and y-axis in the bar plot. 
 
 ### Exercise 20
 
@@ -69,4 +68,4 @@ p2 <- ggplot(team_data, aes(x = hobby)) +
 p2
 ```
 
-*Remove this text (including the stars) and add your answer for Exercise 20 here.*
+The bar chart visualisation method is not as useful when you have a small data set. When the size of the data set increases, you are able to deduce which hobby is the most and least popular in the year. You can also use a pie chart to represent this data visually.
